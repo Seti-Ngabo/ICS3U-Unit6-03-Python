@@ -9,16 +9,12 @@ import random
 
 def lowest_number(randoms):
     # This function calculate smallest number
-    each_loop = 0
-    max_number = 100
-    starting_point = 0
+    second_each_loop = 0
+    max_number = 50
 
-    for each_loop in randoms:
-        starting_point += 1
-        print("The random number {0} is: {1}".format(starting_point, each_loop))
-
-        if each_loop < max_number:
-            max_number = each_loop
+    for second_each_loop in randoms:
+        if second_each_loop < max_number:
+            max_number = second_each_loop
 
     return max_number
 
@@ -28,10 +24,12 @@ def main():
     numbers = []
     final_lowest = 0
     each_loop = 0
+    starting_point = 0
 
     for each_loop in range(0, 10):
-        random_numbers = random.randint(0, 100)
+        random_numbers = random.randint(0, 50)
         numbers.append(random_numbers)
+        print("The random number {0} is: {1}".format(each_loop + 1, random_numbers))
 
     # call function
     final_lowest = lowest_number(numbers)
