@@ -24,7 +24,6 @@ def main():
     numbers = []
     final_lowest = 0
     each_loop = 0
-    starting_point = 0
 
     for each_loop in range(0, 10):
         random_numbers = random.randint(0, 50)
